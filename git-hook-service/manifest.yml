@@ -1,0 +1,6 @@
+---
+applications: 
+- name: git-hook-services
+  command: python service.py
+  path: ./
+  buildpack: https://github.com/cloudfoundry/python-buildpack
