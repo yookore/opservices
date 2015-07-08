@@ -29,7 +29,7 @@ networks:
       dns:
       - 10.10.10.254
       static:
-      - 10.10.10.32
+      - 10.10.10.200
       cloud_properties:
         name: CF Network
         security_groups:
@@ -69,13 +69,13 @@ jobs:
       - dns
       - gateway
       static_ips:
-      - 10.10.10.32
+      - 10.10.10.200
 
 properties:
   vcenter:
-    address: 192.168.2.44
-    user: yookos.external\kayode
-    password: Gonzo@7072
+    address: 192.168.2.247
+    user: yookos.external\administrator
+    password: 5h0v3!0uT
     datacenters:
     - name: Yookos DC01
       vm_folder: docker-broker
@@ -88,10 +88,12 @@ properties:
 
   nats:
     user: nats
-    password: beab2721e17a6043a204
+    password: b57fae5a0aaeb6a706dc
     port: 4222
+    address: 10.10.10.2
     machines:
-      - 10.10.10.14
+      - 10.10.10.2
+      - 10.10.10.3
 
   cfcontainersbroker:
     auth_username: 'containers'
